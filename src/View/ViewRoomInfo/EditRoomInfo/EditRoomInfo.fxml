@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="740.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ViewRoomInfo.EditRoomInfo.EditRoomInfo">
+    <children>
+        <VBox alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="1030.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="200.0" spacing="20.0" style="-fx-background-color: #fff;">
+                    <children>
+                  <JFXTextField fx:id="roomNumberField" disable="true" prefHeight="31.0" prefWidth="60.0" />
+                  <JFXDatePicker fx:id="arrivalDateField" editable="false" prefHeight="31.0" prefWidth="160.0" />
+                  <JFXDatePicker fx:id="departureDateField" editable="false" layoutX="284.0" layoutY="40.0" prefHeight="31.0" prefWidth="160.0" />
+                  <JFXTextField fx:id="totalCostField" disable="true" layoutX="20.0" layoutY="40.0" prefHeight="31.0" prefWidth="70.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXTextField>
+                        <Region prefHeight="90.0" prefWidth="152.0" HBox.hgrow="ALWAYS" />
+                  <JFXComboBox fx:id="comboBox" onAction="#onComboBoxClick" prefHeight="31.0" prefWidth="159.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <JFXButton fx:id="checkOutBtn" prefHeight="42.0" prefWidth="156.0" style="-fx-background-color: green;" text="Check Out" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" right="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="1030.0" VBox.vgrow="ALWAYS">
+            <children>
+                <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+                </TableView>
+            </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+        </VBox>
+    </children>
+</VBox>

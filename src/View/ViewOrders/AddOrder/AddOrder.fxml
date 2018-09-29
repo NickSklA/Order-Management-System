@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ViewOrders.AddOrder.AddOrder">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" spacing="20.0">
+         <children>
+            <JFXComboBox fx:id="roomNumberComboBox" prefHeight="31.0" prefWidth="186.0" promptText="Room Number" HBox.hgrow="ALWAYS" />
+            <JFXDatePicker fx:id="orderDatePicker" promptText="Order Date" HBox.hgrow="ALWAYS" />
+            <JFXTimePicker fx:id="orderTimePicker" promptText="Order Time" HBox.hgrow="ALWAYS" />
+            <JFXCheckBox fx:id="orderPaidCheckBox" text="Paid" HBox.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <JFXListView fx:id="addedItemListView" onMouseClicked="#deleteFromList" prefHeight="429.0" prefWidth="250.0" />
+            <Region prefHeight="429.0" prefWidth="145.0" HBox.hgrow="ALWAYS" />
+            <TreeTableView fx:id="treeTableView" onMouseClicked="#addFromTable" prefHeight="429.0" prefWidth="515.0" HBox.hgrow="ALWAYS">
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy></TreeTableView>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="800.0" spacing="10.0">
+         <children>
+            <Label text="Total Cost: ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="totalCostLabel" editable="false" prefHeight="20.0" prefWidth="39.0" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <Label text="€">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <JFXButton fx:id="addOrderSubmit" prefHeight="42.0" prefWidth="166.0" style="-fx-background-color: green;" text="Submit Order" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

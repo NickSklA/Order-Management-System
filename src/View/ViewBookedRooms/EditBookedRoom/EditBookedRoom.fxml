@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ViewBookedRooms.EditBookedRoom.EditBookedRoom">
+   <children>
+      <TextField fx:id="roomNumberField" prefHeight="30.0" prefWidth="300.0" promptText="Room number">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <DatePicker fx:id="arrivalDatePicker" prefHeight="30.0" prefWidth="300.0" promptText="Arrival date" />
+      <DatePicker fx:id="departureDatePicker" layoutX="121.0" layoutY="80.0" prefHeight="30.0" prefWidth="300.0" promptText="Departure date" />
+      <Button fx:id="bookedRoomSubmit" mnemonicParsing="false" text="Apply changes">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+   </padding>
+</VBox>

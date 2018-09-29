@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="740.0" prefWidth="1030.0" type="VBox" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ViewDashboard.ContentDashboardController">
+    <children>
+        <VBox alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="1030.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+                    <children>
+                        <Label prefHeight="41.0" prefWidth="191.0" text="Dashboard" textFill="#7c8184">
+                            <font>
+                                <Font name="Calibri Light" size="36.0" />
+                            </font>
+                        </Label>
+                  <ProgressIndicator fx:id="progressInd" prefHeight="30.0" prefWidth="30.0" progress="0.0">
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding>
+                  </ProgressIndicator>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" right="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="1030.0" VBox.vgrow="ALWAYS">
+         <children>
+            <LineChart fx:id="lineChart" prefHeight="669.0" prefWidth="1030.0" VBox.vgrow="ALWAYS">
+              <xAxis>
+                <CategoryAxis prefHeight="0.0" prefWidth="969.0" side="BOTTOM" fx:id="x" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="y" side="TOP" />
+              </yAxis>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </LineChart>
+         </children></VBox>
+    </children>
+</fx:root>
